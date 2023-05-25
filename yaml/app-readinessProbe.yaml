@@ -6,7 +6,7 @@ spec:
   containers:
   - name: app
     image: gcr.io/k8s-k3s/demo:v2.0.0
-	
+  
     livenessProbe:
       httpGet:
         path: /
@@ -15,7 +15,7 @@ spec:
       timeoutSeconds: 1
       periodSeconds: 10
       failureThreshold: 3
-	  
+    
     readinessProbe:
       httpGet:
         path: /ready
